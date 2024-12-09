@@ -27,6 +27,7 @@ updates:
     labels:
       - "javascript"
       - "major dependency updates"
+      - "no combine"
     schedule:
       interval: "weekly"
       day: "sunday"
