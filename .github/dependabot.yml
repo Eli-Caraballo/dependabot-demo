@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/javascript"
     target-branch: "main"
     labels:
       - "minor dependency updates"
@@ -22,7 +22,7 @@ updates:
           - "patch"
 
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/javascript"
     labels:
       - "major dependency updates"
     schedule:
