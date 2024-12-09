@@ -41,3 +41,8 @@ updates:
         dependency-type: "development"
         update-types:
           - "major"
+
+  - package-ecosystem: bundler
+    directory: "/ruby"
+    schedule:
+      interval: "weekly"
