@@ -22,3 +22,4 @@ jobs:
         with:
           labels: combined-pr
           ci_required: 'false'
+          ignore_label: "no combine"
