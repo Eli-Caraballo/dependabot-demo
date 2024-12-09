@@ -4,6 +4,7 @@ updates:
     directory: "/javascript"
     target-branch: "main"
     labels:
+      - "javascript"
       - "minor dependency updates"
     schedule:
       interval: "weekly"
@@ -24,6 +25,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/javascript"
     labels:
+      - "javascript"
       - "major dependency updates"
     schedule:
       interval: "weekly"
@@ -38,9 +40,3 @@ updates:
         dependency-type: "development"
         update-types:
           - "major"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
