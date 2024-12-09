@@ -1,13 +1,14 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/javascript"
+    directory: "/"
+    target-branch: "main"
     labels:
-      - "minor version updates"
+      - "minor dependency updates"
     schedule:
       interval: "weekly"
       day: "sunday"
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: lockfile-only
     groups:
       npm-production-minor-dependencies:
         dependency-type: "production"
@@ -21,9 +22,9 @@ updates:
           - "patch"
 
   - package-ecosystem: "npm"
-    directory: "/javascript"
+    directory: "/"
     labels:
-      - "major version updates"
+      - "major dependency updates"
     schedule:
       interval: "weekly"
       day: "sunday"
