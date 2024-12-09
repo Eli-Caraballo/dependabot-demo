@@ -1,7 +1,9 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/javascript"
+    directory: "/"
+    labels:
+      - "minor version updates"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -17,6 +19,16 @@ updates:
         update-types:
           - "minor"
           - "patch"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    labels:
+      - "major version updates"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    versioning-strategy: increase-if-necessary
+    groups:
       npm-production-major-dependencies:
         dependency-type: "production"
         update-types:
@@ -25,3 +37,9 @@ updates:
         dependency-type: "development"
         update-types:
           - "major"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
