@@ -1,35 +1,27 @@
 version: 2
 updates:
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-    versioning-strategy: lockfile-only
-    groups:
-      dev-dependencies:
-        dependency-type: "development"
-      nova:
-        patterns:
-          - "*nova*"
-
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/javascript"
     schedule:
       interval: "weekly"
       day: "sunday"
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
     groups:
-      types:
-        patterns:
-          - "@types/*"
-      eslint:
-        patterns:
-          - "eslint*"
-          - "@typescript-eslint/*"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
+      npm-production-minor-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      npm-development-minor-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+      npm-production-major-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "major"
+      npm-development-major-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "major"
